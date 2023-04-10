@@ -1,0 +1,18 @@
+# curl -v --form user=user --form password=password http://localhost:8080/login
+POST http://localhost:8080/login
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="user"
+
+admin
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+
+123456
+--WebAppBoundary--
+
+###
+
+
+

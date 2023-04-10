@@ -1,0 +1,39 @@
+# curl -v -X POST
+#  http://localhost:8080/loginJSON
+#  -H 'content-type: application/json'
+#  -d '{ "user": "manu" }'
+POST http://localhost:8080/loginJSON
+Content-Type: application/json
+
+{
+  "user": "manu",
+  "password":"123"
+}
+
+###
+
+POST http://localhost:8080/loginXML
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <user>manu</user>
+    <password>123</password>
+</root>
+
+###
+
+POST http://localhost:8080/loginForm
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="user"
+
+manu
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+
+123
+
+###
+POST http://localhost:8080/loginForm?user=manu&password=123

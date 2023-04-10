@@ -1,0 +1,10 @@
+
+###
+# Basic Zm9vOmJhcg== 等价于username：foo，password：bar
+# curl --location --request GET 'http://localhost:8080/admin/secrets'
+#--header 'Authorization: Basic Zm9vOmJhcg=='
+GET http://localhost:8080/admin/secrets
+Authorization: Basic Zm9vOmJhcg==
+
+###
+

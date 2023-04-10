@@ -1,0 +1,16 @@
+# curl --location --request POST 'http://localhost:8080/form_post'
+#--header 'Content-Type: application/x-www-form-urlencoded'
+#--data-urlencode 'message=welcome to go world'
+#--data-urlencode 'nick=anonymous'
+
+POST http://localhost:8080/form_post
+Content-Type: application/x-www-form-urlencoded
+
+message=welcome+to+go+world&nick=anonymous
+
+###
+
+
+
+
+

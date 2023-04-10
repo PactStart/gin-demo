@@ -1,0 +1,10 @@
+GET http://localhost:8080/test
+
+
+###
+
+GET http://localhost:8080/bar
+
+
+###
+GET http://localhost:8080/test2

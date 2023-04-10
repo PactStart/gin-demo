@@ -1,0 +1,8 @@
+POST http://localhost:8085/testing?name=admin&address=China
+Content-Type: application/x-www-form-urlencoded
+
+name=Rex&address=GuangDong
+
+###
+GET http://localhost:8085/testing?name=admin&address=China
+

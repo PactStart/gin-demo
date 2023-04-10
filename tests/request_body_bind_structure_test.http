@@ -1,0 +1,17 @@
+# curl --location --request POST 'http://localhost:8080/postJSON'
+#--header 'Content-Type: application/json'
+#--data-raw '{
+#
+#    "foo":"i am foo",
+#    "bar": "i am bar"
+#}'
+POST http://localhost:8080/postJSON
+Content-Type: application/json
+
+{
+  "foo": "i am foo",
+  "bar": "i am bar"
+}
+
+###
+

@@ -1,0 +1,6 @@
+###
+GET http://localhost:8080/long_async
+
+
+###
+GET http://localhost:8080/long_sync

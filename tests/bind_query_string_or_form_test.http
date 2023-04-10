@@ -1,0 +1,35 @@
+# curl -X GET "localhost:8085/testing?name=appleboy&address=xyz&birthday=1992-03-15"
+GET localhost:8085/testing?name=appleboy&address=xyz&birthday=1992-03-15
+
+###
+
+POST localhost:8085/testing
+Content-Type: application/json
+
+{
+  "name" : "appleboy",
+  "address" : "xyz",
+  "birthday" : "1992-03-15"
+}
+
+
+###
+
+POST http://localhost:8085/testing
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="name"
+
+appleboy
+--WebAppBoundary
+Content-Disposition: form-data; name="address"
+
+xyz
+--WebAppBoundary--
+Content-Disposition: form-data; name="birthday"
+
+1992-03-15
+--WebAppBoundary--
+
+###

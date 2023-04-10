@@ -1,0 +1,35 @@
+###
+
+# curl -X POST http://localhost:8080/upload
+#  -F "file=../upload/source/xhsq.jpg"
+#  -H "Content-Type: multipart/form-data"
+POST http://localhost:8080/single_upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="xhsq.jpg"
+
+< ../upload/source/xhsq.jpg
+--WebAppBoundary--
+
+###
+
+# curl -X POST http://localhost:8080/upload
+#  -F "upload[]=../upload/source/xhsq2.jpg"
+#  -F "upload[]=../upload/source/test.jpg"
+#  -H "Content-Type: multipart/form-data"
+POST http://localhost:8080/multi_upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="upload[]"; filename="xhsq2.jpg"
+
+< ../upload/source/xhsq2.jpg
+--WebAppBoundary
+Content-Disposition: form-data; name="upload[]"; filename="test.txt"
+
+< ../upload/source/test.txt
+--WebAppBoundary--
+
+###
+

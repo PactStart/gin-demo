@@ -1,0 +1,12 @@
+GET localhost:8085/bookable?check_in=2023-05-10&check_out=2023-05-11
+
+###
+
+GET localhost:8085/bookable?check_in=2023-05-11&check_out=2023-05-10
+
+###
+
+GET localhost:8085/bookable?check_in=2023-03-08&check_out=2023-03-09
+
+###
+
